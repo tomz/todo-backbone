@@ -1,0 +1,81 @@
+source 'https://rubygems.org'
+
+gem 'rails', '3.2.8'
+
+# Bundle edge Rails instead:
+# gem 'rails', :git => 'git://github.com/rails/rails.git'
+
+gem 'sqlite3'
+
+# Gems used only for assets and not required
+# in production environments by default.
+group :assets do
+  gem 'sass-rails',   '~> 3.2.3'
+  gem 'coffee-rails', '~> 3.2.1'
+
+  # See https://github.com/sstephenson/execjs#readme for more supported runtimes
+  # gem 'therubyracer', :platforms => :ruby
+
+  gem 'uglifier', '>= 1.0.3'
+end
+
+gem 'jquery-rails'
+gem 'i18n'
+gem 'json'
+gem 'curb'
+
+gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
+gem 'eco'
+gem 'backbone-on-rails'
+#gem 'rails-backbone'
+
+
+# To use ActiveModel has_secure_password
+# gem 'bcrypt-ruby', '~> 3.0.0'
+
+# To use Jbuilder templates for JSON
+# gem 'jbuilder'
+
+# Use unicorn as the app server
+# gem 'unicorn'
+gem 'puma'
+gem 'pry-rails'
+gem 'letters'
+
+# Deploy with Capistrano
+# gem 'capistrano'
+
+# To use debugger
+# gem 'debugger'
+
+# testing and CI stuff
+group :test, :development do
+  gem 'simplecov', :require => false
+  gem 'ci_reporter', '1.7.0'
+  gem 'simplecov-rcov', :require => false
+  gem 'rspec-rails', '~> 2.0'
+  gem 'capybara'
+  gem 'capybara-webkit'
+  gem 'guard'
+  gem 'guard-rspec'
+  gem 'guard-jasmine'
+  gem 'rb-fsevent', '~> 0.9.1'
+  #gem 'jasmine-rails'
+  gem 'jasminerice'
+  gem 'jasmine'
+  gem 'headless'
+  gem 'jasmine-headless-webkit'
+  gem 'sinon-rails'
+  gem "growl"
+  gem 'growl_notify'
+end
+
+group :deployment do
+  gem 'capistrano'
+  gem 'capistrano-ext'
+end
+
+group :test do
+  gem 'webmock'
+  gem 'vcr'
+end
